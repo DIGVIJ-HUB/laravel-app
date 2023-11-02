@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "3cb581df-1da2-44ae-9caa-5b3310b2133c",
+		"name": "laravel-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22329355"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Vedant",
+									"description": "Only character",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "vedant@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"description": "Min 4 ",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "1234",
+									"description": "Re enter password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://laravel-app.test/api/v1/auth/registration",
+							"protocol": "https",
+							"host": [
+								"laravel-app",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "digvij@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234",
+									"description": "Min 4 ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://laravel-app.test/api/v1/auth/login",
+							"protocol": "https",
+							"host": [
+								"laravel-app",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "15|59jgTR0fG3qGsPzVqoe8qxgddTgKEbDBZVhc40dd",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://laravel-app.test/api/v1/auth/logout",
+							"protocol": "https",
+							"host": [
+								"laravel-app",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Movie list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|DWnp3RCOrhDvIZ6hjjEbD0GlWuQqXsqSoIk4daGI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://laravel-app.test/api/v1/home",
+							"protocol": "https",
+							"host": [
+								"laravel-app",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"home"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Movie",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|DWnp3RCOrhDvIZ6hjjEbD0GlWuQqXsqSoIk4daGI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://laravel-app.test/api/v1/movie/1",
+							"protocol": "https",
+							"host": [
+								"laravel-app",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Notifications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|DWnp3RCOrhDvIZ6hjjEbD0GlWuQqXsqSoIk4daGI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://laravel-app.test/api/v1/notifications",
+							"protocol": "https",
+							"host": [
+								"laravel-app",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit rating",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|DWnp3RCOrhDvIZ6hjjEbD0GlWuQqXsqSoIk4daGI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "movie_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "6",
+									"description": "1 to 10",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://laravel-app.test/api/v1/movie/submit-rating",
+							"protocol": "https",
+							"host": [
+								"laravel-app",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"submit-rating"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "Movie list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|W0bR1igms2EiF4yvDMTkSb7KsSh0NrSP5JWKESbh",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://laravel-app.test/api/v1/admin/dashboard",
+							"protocol": "https",
+							"host": [
+								"laravel-app",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single movie list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|W0bR1igms2EiF4yvDMTkSb7KsSh0NrSP5JWKESbh",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://laravel-app.test/api/v1/admin/movie-data/1",
+							"protocol": "https",
+							"host": [
+								"laravel-app",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"movie-data",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|W0bR1igms2EiF4yvDMTkSb7KsSh0NrSP5JWKESbh",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Freedom",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Loremmmmmm",
+									"type": "text"
+								},
+								{
+									"key": "runtime",
+									"value": "01:55:00",
+									"description": "HH:MM:SS\n",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/action-movie-poster-template-design-0f5fff6262fdefb855e3a9a3f0fdd361_screen.jpg?ts=1636996054",
+									"description": "Url",
+									"type": "text"
+								},
+								{
+									"key": "publication_date",
+									"value": "2023-11-04",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://laravel-app.test/api/v1/admin/add-movie",
+							"protocol": "https",
+							"host": [
+								"laravel-app",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"add-movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "10|W0bR1igms2EiF4yvDMTkSb7KsSh0NrSP5JWKESbh",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "movie_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Freedom",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Loremmmmmm",
+									"type": "text"
+								},
+								{
+									"key": "runtime",
+									"value": "01:55:00",
+									"description": "HH:MM:SS\n",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/action-movie-poster-template-design-0f5fff6262fdefb855e3a9a3f0fdd361_screen.jpg?ts=1636996054",
+									"description": "Url",
+									"type": "text"
+								},
+								{
+									"key": "publication_date",
+									"value": "2023-11-04",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://laravel-app.test/api/v1/admin/update-movie",
+							"protocol": "https",
+							"host": [
+								"laravel-app",
+								"test"
+							],
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"update-movie"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
