@@ -19,3 +19,5 @@ Steps to install this project in your local environment:
 4. Run composer install command
 
 5. Refer .env.example file
+
+6. For postman use collection which is located in /postman
